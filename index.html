@@ -1,0 +1,35 @@
+<<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href=""
+      rel="stylesheet"
+    />
+    <title>TaskRabbit</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form>
+        <label form="user">Username</label>
+        <input type="text" id="user" name="user" required>
+        <label form ="email1">Email</label>
+        <input type="email" id = "email1" name="email1" required>
+        <label form="pass">Password</label>
+        <input type="password" id="pass" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        <input type="submit" value="Submit" >
+        <input onclick=" var val=document.getElementById('pass').value;
+        document.getElementById('pass').value(sha512(val));"
+        type="submit">
+    </form>
+    
+
+    <div id="paswd">
+        <h4>Password should be</h4>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter </p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="uppercase" class="invalid">A <b>Uppercase</b> letter </p>
+        <p id="length" class="invalid">Minimum<b>10 characters</b></p>
+        
+    </div>
+  </body>
+</html>
